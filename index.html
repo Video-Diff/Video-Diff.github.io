@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Large-Scale Actionless Video Pre-Training via Discrete Diffusion for Efficient Policy Learning">
+  <meta name="keywords" content="Discrete Diffusion, Large-Scale Actionless, Video-Diff">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Large-Scale Actionless Video Pre-Training via Discrete Diffusion for Efficient Policy Learning</title>
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+  <div class="root-div">  
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <h1 class="title is-1 publication-title">Large-Scale Actionless Video Pre-Training via Discrete Diffusion for Efficient Policy Learning</h1>
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">
+                    <b>Anonymous Authors</b>
+                  </span>
+                <!--
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+
+                    <span class="link-block">
+                      <a href="#"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+                    <span class="link-block">
+                      <a href="#"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                    </span>
+                    <span class="link-block">
+                      <a href="#"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                        </a>
+                    </span>
+
+                  </div>
+                  -->
+                  <div class="column has-text-centered">
+                    <span class="link-block">
+                      <a href="#"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code will come soon</span>
+                        </a>
+                    </span>
+                        </div>
+
+                  
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+  <div class="content has-text-justified">
+    <div class="columns is-centered has-text-centered">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+           <div class="item basketball">
+            <video poster="" id="basketball" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/basketball.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item box-close">
+            <video poster="" id="box-close" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/box-close.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item lever-pull">
+            <video poster="" id="lever-pull" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/lever-pull.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+            <div class="item pick-out-of-hole">
+            <video poster="" id="pick-out-of-hole" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/pick-out-of-hole.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+            <div class="item stick-push">
+            <video poster="" id="stick-push" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/stick-push.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+            <div class="item window_close">
+            <video poster="" id="window_close" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/window_close.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item sweep-into">
+            <video poster="" id="sweep-into" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/sweep-into.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+      </section>
+          <section class="section">
+          <div class="content has-text-justified">
+    <div class="columns is-centered has-text-centered">
+      <div class="container">
+        <div id="results-rlbench" class="carousel results-carousel">
+           <div class="item close-jar">
+            <video poster="" id="close-jar" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_close_jar.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item meat-off-grill">
+            <video poster="" id="meat-off-grill" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_meat-off-grill.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item place-cups">
+            <video poster="" id="place-cups" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_place-cups.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+            <div class="item put-cupboard">
+            <video poster="" id="put-cupboard" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_put-cupboard.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+            <div class="item put-ring">
+            <video poster="" id="put-ring" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_put_ring.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+            <div class="item screw_bulb">
+            <video poster="" id="screw_bulb" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_screw_bulb.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item slide-block">
+            <video poster="" id="slide-block" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_slide-block.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+            <div class="item stack-wine">
+            <video poster="" id="stack-wine" autoplay controls muted loop playsinline height="90%">
+              <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_stack-wine.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+          </section>
+      <section class="section" style="padding-bottom: 0.5rem;">
+        <div class="container is-max-desktop">
+          <!-- Abstract. -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>
+                  Learning a generalist embodied agent capable of completing multiple tasks poses challenges,
+                  primarily stemming from the scarcity of action labeled robotic datasets. In contrast, a vast
+                  amount of human videos exist, capturing intricate tasks and interactions with the physical world.
+                  Promising prospects arise for utilizing actionless human videos for pre-training and transferring
+                  the knowledge to facilitate robot policy learning through limited robot demonstrations.
+                </p>
+                <p>
+                  In this paper, we introduce a novel framework that leverages a unified discrete diffusion to combine 
+                  generative pre-training on human videos and policy fine-tuning on a small number of action-labeled
+                  robot videos. We start by learning compressed visual representations from both human and robot
+                  videos to obtain unified video tokens. In the pretraining stage, we employ a discrete diffusion
+                  model with a mask-and-replace diffusion strategy to predict future video tokens in the latent space.
+                </p>
+                <p>
+                  In the fine-tuning stage, we harness the imagined future videos to guide low-level action learning 
+                  trained on a limited set of robot data. Experiments demonstrate that our method generates high-fidelity 
+                  future videos for planning and enhances the fine-tuned policies compared to previous state-of-the-art approaches.
+                </p>
+                <div class="content" style="margin-top: 30px;">
+                    <img src="./static/images/intro.jpg" alt="" srcset="" />
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!--/ Abstract. -->
+          <hr>
+          <!-- Method. -->
+          <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title is-3">Method</h2>
+                <div class="content align-text">
+                  <p>
+                    Overall pipeline of VPDD. A <strong>video-based VQ-VAE</strong> is leveraged to encode both human and robot videos into discrete latent
+                    codes. Subsequently, a unified discrete diffusion is firstly pre-trained on these video latent codes via a self-supervised 
+                    objective, predicting future videos conditioning on language instructions and historical videos. The pre-trained video prediction 
+                    model \(p_{\theta_1}\) can capture temporal dynamics and representations of the current task. Lastly, we fine-tune our diffusion model on a limited 
+                    number of robot data. In each diffusion step of the fine-tuning stage, we leverage \(p_{\theta_1}\) to provide hidden representations \(z_{\widetilde{x}_{0}^{v}}\)
+                    to accelerate downstream action learning with video foresight. Both video prediction and action learning are executed simultaneously 
+                    through our unified objective.
+                    </p>
+                </div>
+
+              </div>
+          </div>
+            <div class="content" style="margin-top: 30px;">
+                  <img src="./static/images/method.jpg" alt="" srcset="" />
+            </div>
+          <hr>
+          <!--/ Method. -->
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 1rem;">
+        <div class="container is-max-desktop">
+            <div class="content align-text">
+                  <p>
+                    After the pre-training, VPDD exhibits the capability to generate future video clips across diverse tasks while maintaining dynamic consistency.
+                    <strong>Each synthesized video clip consists of 4 frames, and serves as a strong guidance to enable efficient policy learning for downstream tasks.</strong>
+                    Below, we illustrate some video clips on Meta-World. 
+                    </p>
+            </div>
+            <div class="content">
+
+
+                <video width="1000" loop autoplay muted>
+                    <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_meta_1.mp4" type="video/mp4">
+                </video>
+                <video width="1000" loop autoplay muted>
+                    <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_meta_2.mp4" type="video/mp4">
+                </video>
+                <video width="1000" loop autoplay muted>
+                    <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_meta_3.mp4" type="video/mp4">
+                </video>
+
+            </div>
+            <hr>
+            <div class="content align-text">
+                  <p>
+                   VPDD also demonstrates the ability to generate multi-view videos while ensuring view correspondence. Below, we illustrate some video clips on RLBench.
+                  </p>
+            </div>
+            <div class="content">
+
+
+                <video width="1000" loop autoplay muted>
+                    <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_rlbench_1.mp4" type="video/mp4">
+                </video>
+                <video width="1000" loop autoplay muted>
+                    <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_rlbench_2.mp4" type="video/mp4">
+                </video>
+                <video width="1000" loop autoplay muted>
+                    <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_rlbench_3.mp4" type="video/mp4">
+                </video>
+                <video width="1000" loop autoplay muted>
+                    <source src="https://github.com/Video-Diff/Video-Diff.github.io/raw/main/static/videos/_rlbench_4.mp4" type="video/mp4">
+                </video>
+
+            </div>
+        </div>
+      </section>
+
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>@article{2024video-diff,
+         author    = {Anonymous Authors},
+         title     = {Large-Scale Actionless Video Pre-Training via Discrete Diffusion for Efficient Policy Learning},
+         year      = {2024},
+}</code></pre>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <!-- <div class="content has-text-centered">
+            <a class="icon-link"
+              href="./static/videos/nerfies_paper.pdf">
+              <i class="fas fa-file-pdf"></i>
+            </a>
+          </div> -->
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                  <p>
+                      This website is adapted from<a href="https://github.com/nerfies/nerfies.github.io"> Nerfies</a>, licensed
+                      under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                        Commons Attribution-ShareAlike 4.0 International License.</a>
+                    </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+
+</body>
+</html>
