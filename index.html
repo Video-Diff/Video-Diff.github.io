@@ -93,7 +93,11 @@
           </div>
         </div>
       </section>
-
+<div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-5">Our trained agent VPDD can complete a wide range of tasks in MetaWorld and RLBench:</h2>
+        </div>
+    </div>
       <section class="section">
   <div class="content has-text-justified">
     <div class="columns is-centered has-text-centered">
@@ -268,13 +272,26 @@
       <section class="section" style="padding-top: 1rem;">
         <div class="container is-max-desktop">
             <div class="content align-text">
-                  <p>
+                  
                     After the pre-training, VPDD exhibits the capability to generate future video clips across diverse tasks while maintaining dynamic consistency.
                     <strong>Each synthesized video clip consists of 4 frames, and serves as a strong guidance to enable efficient policy learning for downstream tasks.</strong>
-                    Below, we illustrate some video clips on Meta-World. 
+                    <p style="color: red;display: inline;">
+                      To demonstrate the dynamic consistency and accurate prediction of future behavior in the generated video clips by VPDD \(p_{\theta_1}\), we conduct multiple inferences and concatenate the resulting video clips to create an 8-second video. Below, we provide some examples observed in MetaWorld:
+                      <video width="1000" loop autoplay muted>
+                        <source src="./static/videos/Metaworld.mp4" type="video/mp4">
+                    </video>
+                    We additionally fine-tune our pre-trained \(p_{\theta_1}\) on real robot videos with various embodiments to demonstrate the efficacy of our method on real environment. Subsequently, we concatenate the predicted video clips to formulate a 16-second coherent video. Below, we provide examples observed in the real environment:
+                    <video width="1000" loop autoplay muted>
+                      <source src="./static/videos/real.mp4" type="video/mp4">
+                  </video>
                     </p>
             </div>
+            <hr>
             <div class="content">
+
+            
+
+            Below, we illustrate some video clips on Meta-World. 
 
 
                 <video width="1000" loop autoplay muted>
