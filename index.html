@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Large-Scale Actionless Video Pre-Training via Discrete Diffusion for Efficient Policy Learning">
+  <meta name="description" content="Learning an Actionable Discrete Diffusion Policy via Large-Scale Actionless Video Pre-Training">
   <meta name="keywords" content="Discrete Diffusion, Large-Scale Actionless, Video-Diff">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Large-Scale Actionless Video Pre-Training via Discrete Diffusion for Efficient Policy Learning</title>
+  <title>Learning an Actionable Discrete Diffusion Policy via Large-Scale Actionless Video Pre-Training</title>
 
   
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
@@ -217,11 +217,9 @@
               <h2 class="title is-3">Abstract</h2>
               <div class="content has-text-justified">
                 <p>
-                  Learning a generalist embodied agent capable of completing multiple tasks poses challenges,
-                  primarily stemming from the scarcity of action labeled robotic datasets. In contrast, a vast
-                  amount of human videos exist, capturing intricate tasks and interactions with the physical world.
-                  Promising prospects arise for utilizing actionless human videos for pre-training and transferring
-                  the knowledge to facilitate robot policy learning through limited robot demonstrations.
+                  Learning a generalist embodied agent capable of completing multiple tasks poses challenges, primarily stemming from the scarcity of action-labeled robotic datasets. 
+                  In contrast, a vast amount of human videos exist, capturing intricate tasks and interactions with the physical world. Promising prospects arise for utilizing actionless human videos for pre-training and transferring the knowledge to facilitate robot policy learning through limited robot demonstrations. However, it remains a challenge due to the domain gap between humans and robots. 
+                  Moreover, it is difficult to extract useful information representing the dynamic world from human videos, because of its noisy and multimodal data structure.
                 </p>
                 <p>
                   In this paper, we introduce a novel framework that leverages a unified discrete diffusion to combine 
@@ -249,7 +247,7 @@
                 <h2 class="title is-3">Method</h2>
                 <div class="content align-text">
                   <p>
-                    Overall pipeline of VPDD. A <strong>video-based VQ-VAE</strong> is leveraged to encode both human and robot videos into discrete latent
+                    The overall pipeline of VPDD. A <strong>video-based VQ-VAE</strong> is leveraged to encode both human and robot videos into discrete latent
                     codes. Subsequently, a unified discrete diffusion is firstly pre-trained on these video latent codes via a self-supervised 
                     objective, predicting future videos conditioning on language instructions and historical videos. The pre-trained video prediction 
                     model \(p_{\theta_1}\) can capture temporal dynamics and representations of the current task. Lastly, we fine-tune our diffusion model on a limited 
@@ -280,7 +278,7 @@
                       <video width="1000" loop autoplay muted>
                         <source src="./static/videos/MetaWorld.mp4" type="video/mp4">
                     </video>
-                    We additionally fine-tune our pre-trained \(p_{\theta_1}\) on real robot videos with various embodiments to demonstrate the efficacy of our method on real environment. Subsequently, we concatenate the predicted video clips to formulate a 16-second coherent video. Below, we provide examples observed in the real environment:
+                    We additionally fine-tune our pre-trained \(p_{\theta_1}\) on real robot videos with various embodiments to demonstrate the efficacy of our method in real environments. Subsequently, we concatenate the predicted video clips to formulate a 16-second coherent video. Below, we provide examples observed in the real environment:
                     <video width="1000" loop autoplay muted>
                       <source src="./static/videos/real.mp4" type="video/mp4">
                   </video>
